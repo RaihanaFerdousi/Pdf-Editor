@@ -1,13 +1,10 @@
-import './App.css';
-import ToolBar from './Components/ToolBar'
+import { useState } from "react";
+import ToolBar from "./Components/ToolBar";
 
-function App() {
-
+export default function App() {
   return (
-    <>
+    <div style={{ display: "flex" }}>
       <ToolBar/>
-    </>
-  )
+    </div>
+  );
 }
-
-export default App

@@ -10,18 +10,23 @@ export default function ToolBar() {
   return (
     <div className="layout-container">
       <aside className="sidebar-toolbar">
-        <button className="toolbar-button">
+        <button 
+          className="toolbar-button">
           <FaRegCircle/>
         </button>
+
         <button className="toolbar-button">
           <FaRegSquare />
         </button>
+
         <button className="toolbar-button">
           <RiTriangleLine />
         </button>
+
         <button className="toolbar-button">
           <IoPencil />
         </button>
+
         <button className='toolbar-button'>
           <GiStraightPipe />
         </button>
