@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { Canvas } from 'fabric';
-import './ToolBar.css';
+import './Style.css';
 
 export default function ToolBar() {
 
@@ -10,8 +10,8 @@ export default function ToolBar() {
     useEffect(() => {
         if(canvasRef.current){
             const initCanvas = new Canvas(canvasRef.current, {
-                width: 800,
-                height: 600,
+                width: 1125,
+                height: 1200,
             });
             
             initCanvas.backgroundColor = 'white';

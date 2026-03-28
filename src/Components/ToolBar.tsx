@@ -1,4 +1,4 @@
-import './ToolBar.css';
+import './Style.css';
 import { FaRegCircle } from "react-icons/fa";
 import { FaRegSquare } from "react-icons/fa";
 import { RiTriangleLine } from "react-icons/ri";
