@@ -12,8 +12,15 @@ type ToolBarProps = {
 
 export default function ToolBar({ canvas }: ToolBarProps) {
 
+  const disableDrawing = () => {
+    if (canvas) {
+      canvas.isDrawingMode = false;
+    }
+  };
+
   const addCircle = () => {
     if (!canvas) return;
+    disableDrawing();
 
     const circle = new Circle({
       left: 150,
@@ -28,6 +35,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
 
   const addSquare = () => {
     if (!canvas) return;
+    disableDrawing();
     const square = new Rect({
       left: 150,
       top: 150,
@@ -41,6 +49,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
 
   const addStar = () => {
     if (!canvas) return;
+    disableDrawing();
 
     const points = [];
     const numPoints = 5;
@@ -71,6 +80,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
 
   const addTriangle = () => {
     if (!canvas) return;
+    disableDrawing();
 
     const triangle = new Triangle({
       left: 150,
@@ -86,6 +96,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
 
   const addLine = () => {
     if (!canvas) return;
+    disableDrawing();
 
     const line = new Line([50, 50, 150, 150], {
       stroke: 'black',
@@ -98,6 +109,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
 
   const addText = () => {
     if (!canvas) return;
+    disableDrawing();
 
     const text = new IText('Type here...', {
       left: 150,
@@ -108,6 +120,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
     });
 
     canvas.add(text);
+    canvas.setActiveObject(text);
     canvas.renderAll();
   };
 
