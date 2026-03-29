@@ -37,7 +37,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
     if (!canvas) return;
     disableDrawing();
     const square = new Rect({
-      left: 150,
+      left: 300,
       top: 150,
       fill: 'blue',
       width: 100,
@@ -68,7 +68,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
     }
 
     const star = new Polygon(points, {
-      left: 150,
+      left: 450,
       top: 150,
       fill: 'gold',
       strokeWidth: 2,
@@ -83,7 +83,7 @@ export default function ToolBar({ canvas }: ToolBarProps) {
     disableDrawing();
 
     const triangle = new Triangle({
-      left: 150,
+      left: 600,
       top: 150,
       fill: 'yellow',
       width: 100,
@@ -101,6 +101,8 @@ export default function ToolBar({ canvas }: ToolBarProps) {
     const line = new Line([50, 50, 150, 150], {
       stroke: 'black',
       strokeWidth: 5,
+      left: 750,
+      top: 150,
     });
 
     canvas.add(line);
@@ -111,8 +113,8 @@ export default function ToolBar({ canvas }: ToolBarProps) {
     if (!canvas) return;
     disableDrawing();
 
-    const text = new IText('Type here...', {
-      left: 150,
+    const text = new IText('text', {
+      left: 900,
       top: 150,
       fontFamily: 'Arial',
       fontSize: 20,
